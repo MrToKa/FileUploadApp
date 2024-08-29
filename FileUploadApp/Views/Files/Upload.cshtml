@@ -1,0 +1,22 @@
+﻿@model FileUploadApp.Data.Models.Image
+
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<h1>Upload</h1>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="ImageFile">Upload Image</label>
+        <input type="file" name="ImageFile" class="form-control" accept=".jpg,.jpeg" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+
+
